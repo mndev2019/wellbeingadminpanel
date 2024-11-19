@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.loginbg {
+    background-image: url(https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.text-blue {
+    color: #051322;
+}
+
+.jost {
+    font-family: "Jost", sans-serif;
+}
+
+.t-14 {
+    font-size: 14px;
+}
+
+.t-16 {
+    font-size: 16px;
+}
+
+
+.outletheading {
+    color: #071952;
+    font-family: Jost, sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth_btn {
+    background-color: #1976d2 !important;
+    color: #fff !important;
+}
+
+.topbarNav {
+    background: white;
+    height: 82px;
+    /* box-shadow: 4px 4px 30px 0px rgba(75, 102, 171, 0.2); */
+    border-bottom: 1px solid #CBD5E1;
+}
+
+.OtpBox input {
+    height: 3rem !important;
+    width: 3rem !important;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.bg-green {
+    background-color: #4e1246;
+}
+
+.sidebarContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    /* background-color: #; */
+    min-height: 100vh;
+    height: 100%;
+    background: black;
+    box-shadow: 0px 3px 54.3px 11px rgba(41, 41, 41, 0.08);
+
+
+    z-index: 9999;
+    transition: all 0.2s;
+    display: block;
+    width: 270px;
+}
+
+@media (min-width: 768px) {
+    .sidebarContainer {
+        display: block !important;
+    }
+
+    #closeSidebar {
+        display: none !important;
+    }
+
+
+}
+
+.closeSidebar {
+    color: #fff;
+    text-align: right;
+}
+
+.sidebarContainer.collapsed {
+    width: 80px;
+}
+
+.mainContainer {
+    width: calc(100% - 220px);
+    margin-left: 270px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.mainContainer.collapsed {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+}
+
+.sidebarContainer .sidebar-header {
+    width: 100%;
+    height: 80px;
+    /* padding: 3px; */
+    /* background-color: #051322; */
+    /* border-bottom: 1px solid #ddd; */
+    background-color: #000000;
+    line-height: 50px;
+
+    transition: all ease-in-out 0.4s;
+}
+
+.sidebarContainer.collapsed .sidebar-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sidebarContainer.collapsed .sidebar-content {
+    padding: 2rem 1rem;
+    overflow: auto;
+    max-height: calc(100% - 10%);
+}
+
+.sidebarContainer .sidebar-content a {
+    color: #000;
+    text-decoration: none;
+    padding: 9px 0px;
+}
+
+
+
+.sidebarContainer .sidebar-content a.active .icon {
+    /* width: 40px;
+    height: 39px;
+    border-radius: 4px;
+    /* background: #DAF1FF; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); */
+    color: #FEBD59;
+
+
+    /* text-align: center;
+    line-height: 36px; */
+}
+
+
+
+.mobilelogo {
+    display: none;
+}
+
+.sidebar-content a .icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.sidebarContainer:not(.collapsed) .sidebar-content {
+    padding: 1rem 1rem;
+    max-height: calc(100% - 10%);
+    overflow: auto;
+}
+
+/* Adjust the scrollbar width and color */
+.sidebarContainer:not(.collapsed) .sidebar-content::-webkit-scrollbar,
+.sidebarContainer.collapsed .sidebar-content::-webkit-scrollbar {
+    width: 4px;
+    /* Adjust the width as needed */
+}
+
+.overflowscroll::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+
+}
+
+.overflowscroll::-webkit-scrollbar-thumb {
+    background-color: #d3d9e0;
+    /* Change the color as needed */
+    border-radius: 10px;
+}
+
+.overflowscroll::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+.sidebarContainer:not(.collapsed) .sidebar-content::-webkit-scrollbar-thumb,
+.sidebarContainer.collapsed .sidebar-content::-webkit-scrollbar-thumb {
+    background-color: #d3d9e0;
+    /* Change the color as needed */
+    border-radius: 10px;
+}
+
+.sidebarContainer:not(.collapsed) .sidebar-content::-webkit-scrollbar-track,
+.sidebarContainer.collapsed .sidebar-content::-webkit-scrollbar-track {
+    background-color: white;
+    /* Change the track color as needed */
+}
+
+.sidebarContainer.collapsed .sidebar-content a .tool-tip {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 2px 10px;
+    display: none;
+    font-size: 12px;
+    width: 0;
+    border-radius: 3px;
+    transform: none;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.sidebarContainer:not(.collapsed) .sidebar-content ul li a:hover {
+    background-color: #DAF1FF;
+    border-radius: 6px;
+}
+
+
+/* .Sidebar_link.active {
+
+    background: #DAF1FF;
+    border-radius: 6px;
+} */
+
+.sidebarContainer:not(.collapsed) .sidebar-content ul li a:hover p {
+    color: black;
+}
+
+.fullname_logo {
+    width: 103px;
+    display: none;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+
+.sidebarContainer.collapsed .sidebar-content li:hover .tool-tip {
+    display: block;
+    /* right: -90px; */
+    top: 27px;
+    transform: translateX(80px);
+    min-width: 100px;
+    width: fit-content;
+    opacity: 1;
+}
+
+.sidebarContainer.collapsed .sidebar-content li:hover .tool-tip::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 10px solid #000;
+}
+
+/* .sidebarContainer .sidebar-content a:not(.active) .icon {
+    margin-right: 5px;
+    margin-left: 0px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+   
+    background-color: white;
+    border-radius: 5px;
+} */
+
+.sidebarContainer .sidebar-content a.active p {
+    color: #FEBD59;
+    font-weight: 700;
+
+}
+.sidebarContainer .sidebar-content .filltype svg {
+    fill: white;
+}
+
+
+.sidebarContainer .sidebar-content .filltype.active svg {
+    fill: #FEBD59;
+}
+
+.sidebar-content p {
+    margin-bottom: 0;
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* .sidebarContainer .sidebar-content a .icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: #ddd;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 25%);
+    color: #264653;
+    text-align: center;
+    line-height: 40px;
+  }
+       */
+.sidebar-footer {
+    height: 100px;
+}
+
+.notificationsUl li {
+    padding: 10px 0;
+}
+
+.notificationsUl li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .sidebarContainer.collapsed {
+        width: 60px;
+    }
+
+    .mainContainer.collapsed {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+
+    .nonetooltip,
+    .desktoplogo {
+        display: none !important;
+    }
+
+    .mobilelogo {
+        display: block;
+    }
+
+    .mobilelogo img {
+        width: 50px;
+    }
+
+    .mainContainer .makeExtend {
+        display: none !important;
+    }
+
+    #closeSidebar {
+        position: absolute;
+        right: 0;
+        border: 0;
+        width: 30px;
+        display: 30px;
+        height: 30px;
+
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        /* background: #dddddd6e; */
+        padding: 0;
+        z-index: 999999;
+        top: 14px;
+    }
+}
+
+.w-100.topbarNav.nav-bg {
+    position: fixed;
+    top: 0;
+    height: 58px;
+    background-color: aliceblue;
+    line-height: 50px;
+    z-index: 999999;
+}
+
+.tileclass {
+    /* background-color: #051322; */
+    background-color: #435585;
+    width: 300px;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+label {
+    font-weight: 700;
+}
+
+.bg-blue {
+    background: #051322 !important;
+}
+
+.MuiDataGrid-columnHeader.MuiDataGrid-columnHeader--sortable.MuiDataGrid-withBorderColor,
+.MuiDataGrid-columnHeaders.MuiDataGrid-withBorderColor.css-y599qu {
+    background-color: #051322 !important;
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+
+    .MuiDataGrid-columnHeader.MuiDataGrid-columnHeader--sortable.MuiDataGrid-withBorderColor.grid-header,
+    .MuiDataGrid-cell--withRenderer.MuiDataGrid-cell.MuiDataGrid-cell--textLeft.MuiDataGrid-cell--withRightBorder.MuiDataGrid-withBorderColor,
+    .MuiDataGrid-cell.MuiDataGrid-cell--textLeft.MuiDataGrid-cell--withRightBorder.MuiDataGrid-withBorderColor,
+    .MuiDataGrid-cell.MuiDataGrid-cell--textRight.MuiDataGrid-cell--withRightBorder.MuiDataGrid-withBorderColor,
+    .MuiDataGrid-cell.MuiDataGrid-cell--textLeft.MuiDataGrid-withBorderColor,
+    .MuiDataGrid-columnHeader.MuiDataGrid-columnHeader--sortable.MuiDataGrid-withBorderColor {
+        height: 56px;
+        width: 150px !important;
+        min-width: 150 !important;
+        max-width: 150px !important;
+    }
+
+    .MuiDataGrid-virtualScroller.css-qvtrhg-MuiDataGrid-virtualScroller {
+        overflow: auto !important;
+    }
+
+    .responsiveheading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .responsiveheading .flex.items-center.mt-3 {
+        margin-top: 0;
+    }
+}
+
+.sidebarContainer.collapsed .bg-white.d-md-block.d-none.mt-2.rounded-3.shadow {
+    margin-top: 10px;
+}
+
+.sidebarContainer .sidebar-content a.active .icon img {
+    position: relative;
+    top: 5px;
+    width: 40px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    /* ensure it's above other elements */
+    background-color: rgb(178 173 172 / 63%);
+    /* background-color: #eeeeee; */
+}
+
+.soldabs {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.css-ptiqhd-MuiSvgIcon-root {
+    color: white;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: #051322;
+}
+
+.nav-item .nav-link {
+    color: black;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeSmall.MuiDataGrid-menuIconButton.css-1j7qk7u {
+    color: white !important;
+}
+
+
+
+
+
+.overauto {
+    overflow: auto;
+}
+
+
+.Toastify {
+    z-index: 9999999999 !important;
+}
+
+.overflowscroll {
+    overflow-y: auto;
+    padding-bottom: 4px;
+}
+
+
+.sidebarContainer.collapsed .sidebar-content ul>li>ul {
+    display: none;
+}
+
+.sidebarContainer .sidebar-content ul>li>ul {
+    display: block;
+}
+
+.sidebarContainer .sidebar-content ul>li>div>.Sidebar_link {
+    cursor: pointer;
+}
+
+
+.shadow {
+    box-shadow: 0px 3px 54.3px 11px #29292914 !important;
+    background-color: white;
+
+}
