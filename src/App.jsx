@@ -10,6 +10,7 @@ import CommunityManagement from './Pages/CommunityManagement'
 import RemainderNotification from './Pages/RemainderNotification'
 import CommunityEngagement from './Pages/CommunityEngagement'
 import UserProgress from './Pages/UserProgress'
+import Login from './Pages/Login'
 
 function App() {
   const routes = createBrowserRouter(
@@ -28,6 +29,7 @@ function App() {
 
 
         </Route>
+        <Route path='/login' element={<Login/>}/>
 
 
       </>
