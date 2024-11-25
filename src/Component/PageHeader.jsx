@@ -7,6 +7,7 @@ import { DtPicker } from 'react-calendar-datetime-picker'
 import 'react-calendar-datetime-picker/dist/style.css'
 import angle from "../assets/Image/angle.png"
 import plus from "../assets/Image/plus.png"
+import { ToastContainer } from "react-toastify"
 function PageHeader(props) {
 
 
@@ -15,6 +16,7 @@ function PageHeader(props) {
     const [fromDate, setFromDate] = useState("");
     return (
         <>
+            <ToastContainer />
             <div className="flex items-center justify-between">
                 <h3 className="font-bold text-[26px]">{props?.title}</h3>
 
