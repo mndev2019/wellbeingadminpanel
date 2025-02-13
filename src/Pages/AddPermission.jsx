@@ -33,13 +33,13 @@ function AddPermission() {
 
     const handleEdit = () => {
 
-        setName(state.name);
-        setusertype(state.user_type?._id || "");
+        setName(state?.name);
+        setusertype(state.usertype?._id ?? state.usertype);
         setphone(state.phone)
 
 
-        const formattedRoles = state.roles.map(role => ({
-            type: role.type._id,
+        const formattedRoles = state?.roles?.map(role => ({
+            type: role?.type?._id,
             value: role.value
         }));
 
@@ -92,11 +92,13 @@ function AddPermission() {
     }, []);
 
     useEffect(() => {
-        if (state) {
+        if (state || id) {
             handleEdit()
         }
-    }, [state, moduledata])
+    }, [state, moduledata, id])
 
+
+    console.log(state)
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
@@ -119,7 +121,7 @@ function AddPermission() {
         if (state) {
 
             if (id) {
-                await superadminputapi(`update?_id=${state._id}`, requestdata, token)
+                await superadminputapi(`users/${state._id}`, requestdata, token)
 
             } else {
 
@@ -134,11 +136,11 @@ function AddPermission() {
             setLoading(false)
             toast.success("Data Submit Succesffully")
 
-            if (vendorpage) {
-                navigate('/user')
-            } else {
-                navigate(-1)
-            }
+            // if (vendorpage) {
+            //     navigate('/user')
+            // } else {
+            //     navigate(-1)
+            // }
 
 
         } else {

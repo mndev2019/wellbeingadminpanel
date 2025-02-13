@@ -22,10 +22,10 @@ function PageHeader(props) {
 
                 <div className="flex justify-between gap-6 items-center mb-6">
                     {props.btn &&
-                        <button onClick={props.onClick} className="btn bg-primary flex gap-2 items-center text-secondary py-6 px-4 text-[18px] font-[700] rounded-lg"><img src={plus} alt="" /> {props.btn}</button>
+                        <button onClick={props.onClick} className="btn bg-primary flex gap-2 items-center text-secondary py-4 px-4 text-[18px] font-[700] rounded-lg"><img src={plus} alt="" /> {props.btn}</button>
                     }
                     {props.filter &&
-                        <div className="bg-white shadow p-4 rounded-[12px] flex gap-4  items-center">
+                        <div className="bg-white shadow p-2 rounded-[12px] flex gap-4  items-center">
                             <div className="size-10 bg-shadeprimary  flex justify-center items-center rounded-lg">
                                 <img src={calender} alt="" />
                             </div>
@@ -61,7 +61,7 @@ function PageHeader(props) {
                         </div>
                     }
                     {props.weekly &&
-                        <div className="bg-white shadow p-4 rounded-[12px] flex gap-4  items-center h-[83px]">
+                        <div className="bg-white shadow p-2 rounded-[12px] flex gap-4  items-center h-[70px]">
                             <div className="size-10 bg-shadeprimary  flex justify-center items-center rounded-lg">
                                 <img src={calender} alt="" />
                             </div>

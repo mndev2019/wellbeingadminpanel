@@ -52,37 +52,39 @@ const UserManagement = () => {
     },
     {
       headerName: "Membership Plan",
-      field: "membership_plan" // Assuming 'membership_plan' is the correct field name in your data
+      field: "activemembership.name"
     },
     {
       headerName: "Company Name",
-      field: "company_name"
+      field: "companyDetails[0].companyname"
     },
     {
       headerName: "Start Date",
-      field: "start_date"
+      field: "membership_start_date",
+
     },
     {
       headerName: "Expiry Date",
-      field: "expire_date"
+      field: "membership_end_date"
     },
     {
       headerName: "Amount (₹)",
-      field: "amount"
+      field: "activemembership.price"
     },
     {
       headerName: "Sign Up Fee (₹)",
-      field: "sign"
+      field: "activemembership.price"
     },
     {
       headerName: "Stripe Payment Type",
-      field: "payment" // Corrected spelling from 'payemnt' to 'payment'
+      field: "payment"
     },
     {
       headerName: "Membership Status",
       field: "membership"
     },
   ];
+
 
 
 
@@ -96,7 +98,7 @@ const UserManagement = () => {
         <div className="grid grid-cols-1">
           <div className="col-span-1 mt-3">
             <div className="overflow-auto table-responsive">
-              <Table data={data} columns={columns} urlclick={'default-permission'} />
+              <Table data={data} columns={columns} rolesclick={`addpermission`} editclick={`adduser`} rolesview={true} />
             </div>
 
           </div>

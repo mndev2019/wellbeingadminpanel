@@ -23,7 +23,7 @@ function App() {
       <>
 
         <Route path='/' element={<Layout />}>
-          <Route path='/user-management' element={<UserManagement />} />
+          <Route path='/' element={<UserManagement />} />
           <Route path='/user-engagement' element={<UserEngagement />} />
           <Route path='/content-management' element={<ContentManagement />} />
           <Route path='/workout-management' element={<WorkoutManagement />} />
@@ -32,9 +32,15 @@ function App() {
           <Route path='/community-engagement' element={<CommunityEngagement />} />
           <Route path='/user-progress' element={<UserProgress />} />
           <Route path='/module' element={<Module />} />
+
+
           <Route path='/adduser' element={<AddUser />} />
           <Route path='/default-permission' element={<DefaultPermission />} />
-          
+          <Route path='/addpermission/:id?' element={<AddPermission />} />
+
+
+
+
 
 
 
@@ -44,7 +50,7 @@ function App() {
 
 
         </Route>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/login' element={<Login />} />
 
 
       </>

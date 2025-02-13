@@ -54,8 +54,7 @@ function DefaultPermission() {
         <>
             {loading && <Loader />}
             <PageHeader title="Default Permission" btn="Add Default Permission" onClick={() => handlenavigate()} />
-            <Table data={data} columns={columns} urlclick={'addpermission'} />
-
+            <Table data={data} columns={columns} editclick={'addpermission'} />
         </>
     )
 }

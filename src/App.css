@@ -58,3 +58,25 @@
   padding: 0 !important;
   text-align: start !important;
 }
+
+.OtpBox input {
+  border: 1px solid grey;
+  border-radius: 6px;
+  height: 3em;
+  margin-left: 10px;
+  width: 2.5em !important;
+}
+
+
+.react-calendar-datetime-picker .header{
+background-color: #FEBD59 !important;
+}
+
+.react-calendar-datetime-picker .daysList .is-today{
+  box-shadow: inset 0 0 0 2px #FEBD59 !important;
+}
+
+
+.sidebarContainer .sidebar-content a.active button i{
+  color: #FEBD59;
+}
